@@ -6,3 +6,4 @@
 *.pyc
 *.log
 secret.json
+include/Secrets.hpp
