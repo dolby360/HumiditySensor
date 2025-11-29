@@ -7,7 +7,8 @@ SystemManager::SystemManager(DHT& dht, WiFiManager* wifiManager, GcpAuth* gcpAut
       _wifiManager(wifiManager),
       _gcpAuth(gcpAuth),
       _deviceId(deviceId),
-      _sendInterval(10000), // Default: 10 seconds
+      _sendInterval(3600000), // Default: 1 Hour
+    //   _sendInterval(10000), // Default: 10 seconds for testing
       _lastSendTime(0) {
 }
 

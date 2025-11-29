@@ -7,3 +7,4 @@
 *.log
 secret.json
 include/Secrets.hpp
+functions/telegram_secret.txt

@@ -25,10 +25,10 @@ def get_id_token() -> str:
 
 def main() -> None:
     id_token = get_id_token()
-
+    print(f"ID Token: {id_token}")
     payload = {
         "temperature": 25.6,
-        "humidity": 60.3,
+        "humidity": 66.3,
         "device_id": "esp32_garage",
     }
 
@@ -37,7 +37,7 @@ def main() -> None:
         "Content-Type": "application/json",
     }
 
-    response = requests.post(ENDPOINT, json=payload, headers=headers, timeout=10)
+    response = requests.post(ENDPOINT, json=payload, headers=headers, timeout=20)
     print(f"Status: {response.status_code}")
     try:
         print("Response:", response.json())

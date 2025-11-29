@@ -97,9 +97,9 @@ String GcpAuth::createJWT() {
     uint8_t signature[256];
     size_t sig_len = 0;
     ret = mbedtls_pk_sign(&pk, MBEDTLS_MD_SHA256, hash, 32, signature, &sig_len, NULL, NULL);
-    
+
     mbedtls_pk_free(&pk);
-    
+
     if (ret != 0) {
         Serial.printf("Failed to sign JWT: -0x%04x\n", -ret);
         return "";

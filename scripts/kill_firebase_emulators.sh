@@ -2,14 +2,12 @@
 
 # Common Firebase emulator ports
 PORTS=(
-  8080   # Firestore
   9000   # Realtime Database
   5001   # Functions
   4000   # Emulator UI
   5000   # Hosting
   8085   # Pub/Sub
   9199   # Auth
-  8081   # Firestore REST
 )
 
 echo "🔍 Searching for Firebase emulator processes..."
